@@ -3,11 +3,6 @@ variable "server_name" {
   type        = string
 }
 
-variable "user_data" {
-  description = "A User Data script to execute while the server is booting."
-  type        = string
-}
-
 variable "server_image" {
     description = "The image ID that will be used to create the instance"
     type = string
@@ -26,6 +21,16 @@ variable "server_location" {
 variable "labels" {
     description = "Labels that are set at the instance"
     type = map(string)
+}
+
+variable "access_token" {
+    description = "The Hetzner cloud access token"
+    type = string
+}
+
+variable "admin_user" {
+    description = "The user name that will have admin access"
+    type = string
 }
 
 variable "ssh_key" {
