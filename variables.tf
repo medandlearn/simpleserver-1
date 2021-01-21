@@ -33,7 +33,12 @@ variable "admin_user" {
     type = string
 }
 
+variable "keyname" {
+    description = "The name of the public ssh key stored at Hetzner"
+    type = string
+}
+
 variable "ssh_key" {
-    description = "The public key that will be used to check ssh access"
+    description = "The value of the public key that will be used to check ssh access"
     type = string
 }

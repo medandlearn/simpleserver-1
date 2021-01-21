@@ -8,7 +8,7 @@ resource "hcloud_server" "simpleserver" {
   server_type = var.server_type
   location    = var.server_location
   labels      = var.labels
-  ssh_keys    = [ var.ssh_key ]
+  ssh_keys    = [ var.keyname ]
   user_data   = templatefile (
                       "${path.module}/user-data-server.mm",
                         {
