@@ -1,3 +1,5 @@
+# plugin for hetzner cloud
+#
 terraform {
   required_providers {
     hcloud = {
@@ -7,10 +9,14 @@ terraform {
   required_version = ">= 0.13"
 }
 
+# parameter for hetzner cloud provisioner
+#
 provider "hcloud" {
   token = var.access_token
 }
 
+# virtual machine resource
+#
 resource "hcloud_server" "simpleserver" {
   name        = var.server_name
   image       = var.server_image
