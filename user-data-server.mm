@@ -44,9 +44,11 @@ MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="userdata.txt"
 #!/bin/bash
+    
 
 # update host
 apt -y update
+apt -y docker.io    
 
 # do bootup stuff
 
