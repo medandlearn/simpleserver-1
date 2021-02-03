@@ -48,7 +48,7 @@ Content-Disposition: attachment; filename="userdata.txt"
 
 # update host
 apt -y update
-apt -y docker.io    
+apt -y install docker.io    
 
 # do bootup stuff
 
