@@ -48,7 +48,10 @@ Content-Disposition: attachment; filename="userdata.txt"
 
 # update host
 apt -y update
-apt -y install docker.io    
+apt -y install docker.io 
+docker run -d --name postgres-server -p 5432:5432 -e "POSTGRES_PASSWORD=kamisama123" postgres
+docker volume create postgres-data
+apt-get -y install postgresql-client
 
 # do bootup stuff
 
